@@ -19,7 +19,10 @@ class Settings(BaseSettings):
     mail_server: str
     redis_host: str = 'localhost'
     redis_port: int = 6379
-    
+    redis_password: str | None = None
+    CLD_NAME: str
+    CLD_API_KEY: int
+    CLD_API_SECRET: str
 
 
     model_config = ConfigDict(env_file =".env", env_file_encoding ="utf-8")
